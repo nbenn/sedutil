@@ -13,12 +13,6 @@ cd buildroot
 git checkout -b PBABUILD ${BUILDROOT_TAG}  || die
 git reset --hard
 git clean -df
-#add patches
-cd ..
-mkdir patches
-cp -r ../buildroot/patches/* patches/
-# add out of tree build directoried and files
-cd buildroot
 # 64 bit system
 mkdir 64bit
 cp ../../buildroot/64bit/.config 64bit/
